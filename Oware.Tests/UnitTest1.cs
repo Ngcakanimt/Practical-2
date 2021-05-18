@@ -10,9 +10,14 @@ namespace Oware.Tests
         }
 
         [Test]
-        public void Test1()
+        public void ResetHouse()
         {
-            Assert.Pass();
+            // ARRANGE:
+            house h = new house(0,0)
+            // ACT: 
+            h.ResetHouse() // This method clears the seeds then adds 4 seeds to each house
+            // ASSERT:
+            Assert.areEqual(4, h.GetCount(), "Reset houses must have 4 seeds in them") // At the end, house must have 4 seeds
         }
     }
 }
